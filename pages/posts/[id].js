@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import Date from "../../components/date";
+import utilStyles from "../../styles/utils.module.scss";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -20,10 +22,14 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <h1>{postData.title}</h1>
-      <p>{postData.date}</p>
-      {/* TODO: markdown に自分が定義したスタイルを適用する */}
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <article>
+        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <div className={utilStyles.lightText}>
+          <Date dateString={postData.date} />
+        </div>
+        {/* TODO: markdown に自分が定義したスタイルを適用する */}
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </article>
     </Layout>
   );
 }
