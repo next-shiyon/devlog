@@ -27,8 +27,6 @@ export default function Home({ allPostsData }) {
               {/* TODO: design system 見直し */}
               {title}
               <br />
-              {id}
-              <br />
               {date}
             </li>
           ))}
