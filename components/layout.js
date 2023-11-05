@@ -4,7 +4,7 @@ import styles from "./layout.module.scss";
 import utilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
 
-const name = "SIYEON PARK";
+const name = "TOKYO PARK";
 export const siteTitle = "TOKYO PARK";
 
 export default function Layout({ children, home }) {
@@ -25,9 +25,10 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+
+      <header>
         {home ? (
-          <>
+          <figure className={styles.profile}>
             <Image
               priority
               src="/images/profile.jpg"
@@ -36,12 +37,14 @@ export default function Layout({ children, home }) {
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            <p>I love Front-End so much ... ✨</p>
-          </>
+            <figcaption>
+              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <p>I love Front-End so much ... ✨</p>
+            </figcaption>
+          </figure>
         ) : (
-          <>
-            <Link href="/">
+          <Link href="/" className={utilStyles.colorInherit}>
+            <figure className={styles.profile}>
               <Image
                 priority
                 src="/images/profile.jpg"
@@ -50,16 +53,16 @@ export default function Layout({ children, home }) {
                 width={108}
                 alt={name}
               />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
+              <figcaption>
+                <h2 className={utilStyles.headingLg}>{name}</h2>
+              </figcaption>
+            </figure>
+          </Link>
         )}
       </header>
+
       <main>{children}</main>
+
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
