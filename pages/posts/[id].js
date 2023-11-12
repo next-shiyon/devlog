@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.scss";
+import Markdown from "react-markdown";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -27,8 +28,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        {/* TODO: markdown に自分が定義したスタイルを適用する */}
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <Markdown>{postData.content}</Markdown>
       </article>
     </Layout>
   );
