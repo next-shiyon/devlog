@@ -4,6 +4,7 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.scss";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -28,7 +29,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <Markdown>{postData.content}</Markdown>
+        <Markdown remarkPlugins={[remarkGfm]}>{postData.content}</Markdown>
       </article>
     </Layout>
   );
