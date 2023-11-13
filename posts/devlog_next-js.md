@@ -84,7 +84,7 @@ CSS を import するときは、二つの方法がある。
 
 next.js は SCSS を利用することで、ユニークなクラス名を自動的につけてくれる。
 （Code Splitting は CSS にも適用され、必要な最低限の CSS だけをロードする）
-![ユニークなクラス名](/public/images/posts/unique-class-name.png)
+![ユニークなクラス名](/images/posts/unique-class-name.png)
 
 > グローバル CSS は `pages/_app.js`で import するらしい！他のところでは グローバル CSS を import することはできない。（`_app.js`は React コンポーネントのルートにあり、すべてのページを包んでいる。グローバルな状態を管理するのは `_app.js` で行う。）このファイルの格納先やファイル名は特に制約などない。
 
