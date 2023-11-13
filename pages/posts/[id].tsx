@@ -5,20 +5,33 @@ import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.scss";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { PostType } from "..";
 
-export async function getStaticPaths() {
+type ParamType = {
+  params: Pick<PostType, "id">;
+};
+
+export type PostDataType = PostType & {
+  content: string;
+};
+
+type Props = {
+  postData: PostDataType;
+};
+
+export const getStaticPaths = async () => {
   const paths = getAllPostIds();
   return { paths, fallback: false };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps = async ({ params }: ParamType) => {
   const postData = await getPostData(params.id);
   return {
     props: { postData },
   };
-}
+};
 
-export default function Post({ postData }) {
+const Post = ({ postData }: Props) => {
   return (
     <Layout>
       <Head>
@@ -33,4 +46,6 @@ export default function Post({ postData }) {
       </article>
     </Layout>
   );
-}
+};
+
+export default Post;

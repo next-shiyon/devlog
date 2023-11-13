@@ -5,6 +5,16 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 
+export type PostType = {
+  id: string;
+  title: string;
+  date: string;
+};
+
+type Props = {
+  allPostsData: PostType[];
+};
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -14,7 +24,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allPostsData }) {
+const Home = ({ allPostsData }: Props) => {
   return (
     <Layout home>
       <Head>
@@ -36,4 +46,6 @@ export default function Home({ allPostsData }) {
       </section>
     </Layout>
   );
-}
+};
+
+export default Home;
