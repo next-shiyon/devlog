@@ -24,6 +24,10 @@ const Layout = ({ children, home }: Props) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="robots" content="all" />
+        <meta
+          name="google-site-verification"
+          content="CIWWv06k_isL0fYmnOS2gyxrWDQWK_JvGq-pW2ZkhUM"
+        />
       </Head>
 
       <header>
