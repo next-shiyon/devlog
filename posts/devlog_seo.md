@@ -1,9 +1,9 @@
 ---
-title: "[SEO 最適化] あなたの記事は検索されていますか？"
+title: "[SEO] あなたの記事は検索されていますか？"
 date: "2023-11-19"
 ---
 
-## SEO 最適化のきっかけ
+## SEO のきっかけ
 
 ![blog posting](/images/posts/blog-posting.png)
 
@@ -11,7 +11,7 @@ date: "2023-11-19"
 
 ![google search result](/images/posts/google-search.png)
 
-ヒットされない〜 😇 そういう意味で SEO 最適化をやっていきたいと思う。([参考ドキュメントはこちら](https://nextjs.org/learn-pages-router/seo/introduction-to-seo))
+ヒットされない〜 😇 そういう意味で SEO をやっていきたいと思う。([参考ドキュメントはこちら](https://nextjs.org/learn-pages-router/seo/introduction-to-seo))
 
 ## SEO 最適化の 3 つの柱
 
@@ -28,7 +28,7 @@ date: "2023-11-19"
 3. **Rendering** – executing any resources on the page such as JavaScript that might enhance the features and enrich content on the site. This process doesn't happen for all pages that are crawled and sometimes it happens before the content is actually indexed. Rendering might happen after indexing if there are no available resources to perform the task at the time.
 4. **Ranking** – querying data to craft relevant results pages based on user input. This is where the different ranking criteria are applied in Search engines to give users the best answer to fulfill their intent.
 
-（検索エンジンごとに違う対応が必要であった、意外と HTTP status code も SEO 最適化と関連があるんだ・・）
+（検索エンジンごとに違う対応が必要であった、意外と HTTP status code も SEO と関連があるんだ・・）
 
 ## robots.txt
 
@@ -54,7 +54,7 @@ Allow: /
 
 - **Your site is new and has few external links to it.** Googlebot and other web crawlers navigate the web by following links from one page to another. As a result, Google might not discover your pages if no other sites link to them.
 
-このブログは新しく作られたウェブサイトだから、sitemaps を通した SEO 最適化も必要そう。いろんな方法があるみたいだが、まだは簡単なウェブだし、静的コンテンツで作ろう。
+このブログは新しく作られたウェブサイトだから、sitemaps を通した SEO も必要そう。いろんな方法があるみたいだが、まだは簡単なウェブだし、静的コンテンツで作ろう。
 
 ```xml
    <!-- public/sitemap.xml -->
@@ -74,4 +74,4 @@ Allow: /
 
 ちゃんと検索されるところまで、確認したいが今のところはまだ Google に検索されない。クロールされるまで時間がもっと必要なのか？様子を見て追加で最適化をするなりなんなりしてみよう！
 
-あ、余談だけど、もっと 1 つのテーマに対して時間かけて作ってみても良いと思った。SEO 最適化をする上でももっとこの記事のクオリティーを高める必要もあるし、テキパキやってしまうと、頭に残るものがないしね・・！じっくり時間かけながら工夫して開発しよう。そしてそれをちゃんと記事にまとめて発信した方が読者さんも喜ぶし。
+あ、余談だけど、もっと 1 つのテーマに対して時間かけて作ってみても良いと思った。SEO をする上でももっとこの記事のクオリティーを高める必要もあるし、テキパキやってしまうと、頭に残るものがないしね・・！じっくり時間かけながら工夫して開発しよう。そしてそれをちゃんと記事にまとめて発信した方が読者さんも喜ぶし。
