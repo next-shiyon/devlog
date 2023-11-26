@@ -1,7 +1,8 @@
 ---
 title: "[a11y] アクセしビリティを考慮しましょう"
 date: "2023-11-26"
-series: "blog"
+category: "blog"
+tags: ["a11y", "light-houst"]
 ---
 
 ## Light houst を利用してみよう

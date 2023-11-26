@@ -1,8 +1,8 @@
 ---
 title: "[SEO] あなたの記事は検索されていますか？"
 date: "2023-11-19"
-series: "blog"
-tag: ["SEO"]
+category: "blog"
+tags: ["SEO", "google-search-console"]
 ---
 
 ## SEO のきっかけ

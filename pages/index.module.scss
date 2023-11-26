@@ -1,0 +1,21 @@
+.postInfoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.tagsContainer {
+  display: flex;
+  gap: 6px;
+  padding: 0px 8px;
+
+  .tag {
+    color: #4482ff;
+    padding: 2px 12px;
+    background-color: #eaf1fa;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+}

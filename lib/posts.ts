@@ -15,12 +15,14 @@ export const getSortedPostsData = (): PostType[] => {
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     const matterResult = matter(fileContents);
-    const { title, date } = matterResult.data;
+    const { title, date, category, tags } = matterResult.data;
 
     return {
       id,
       title,
       date,
+      category,
+      tags,
     };
   });
 
@@ -47,12 +49,14 @@ export const getPostData = async (id: string): Promise<PostDataType> => {
 
   const matterResult = matter(fileContents);
   const { content, data } = matterResult;
-  const { title, date } = data;
+  const { title, date, category, tags } = data;
 
   return {
     id,
     title,
     date,
+    category,
+    tags,
     content,
   };
 };
