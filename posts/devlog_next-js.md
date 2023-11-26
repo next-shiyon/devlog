@@ -1,6 +1,8 @@
 ---
 title: "[Next.js] ブログっぽいものを作る上で、必要最低限 Next.js 知識"
 date: "2023-11-10"
+series: "blog"
+tag: ["next.js"]
 ---
 
 ## はじめに
