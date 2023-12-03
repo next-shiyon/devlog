@@ -56,7 +56,7 @@ const Layout = ({ children, home }: Props) => {
       )}
 
       <footer className={styles["footer"]}>
-        Copyright © 2023 SIYEON PARK. All Rights Reserved.
+        Copyright 2023. SIYEON PARK All Rights Reserved.
       </footer>
     </div>
   );
