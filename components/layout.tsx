@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.scss";
-import utilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
 
 const name = "SIYEON PARK";
@@ -36,29 +35,27 @@ const Layout = ({ children, home }: Props) => {
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
             />
             <figcaption>
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <h1>{name}</h1>
               <p>I love Front-End so much ... ✨</p>
             </figcaption>
           </figure>
         ) : (
-          <Link href="/" className={utilStyles.colorInherit}>
-            <figure className={styles.profile}>
+          <Link href="/">
+            <figure>
               <Image
                 priority
                 src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
                 height={108}
                 width={108}
                 alt={name}
               />
               <figcaption>
-                <h2 className={utilStyles.headingLg}>{name}</h2>
+                <h2>{name}</h2>
               </figcaption>
             </figure>
           </Link>
