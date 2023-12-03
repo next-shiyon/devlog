@@ -1,9 +1,11 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
   max-width: 768px;
-  margin: var(--spacing-md) auto auto;
+  min-height: 100vh;
+  margin: var(--spacing-lg) auto auto;
 }
 
 .header-container {
@@ -32,5 +34,25 @@
 }
 
 .backToHome {
-  margin: 3rem 0 0;
+  margin: 5rem 0;
+
+  > a {
+    color: var(--color-action);
+    text-decoration: none;
+  }
+
+  > a:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer {
+  padding: var(--spacing-md);
+  position: absolute;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }

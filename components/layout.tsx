@@ -29,29 +29,35 @@ const Layout = ({ children, home }: Props) => {
         />
       </Head>
 
-      <header>
-        <figure className={styles["header-container"]}>
-          <Image
-            priority
-            src="/images/profile.jpg"
-            height={144}
-            width={144}
-            alt={name}
-          />
-          <figcaption>
-            <h1>{name}</h1>
-            <p>I love Front-End so much ... ✨</p>
-          </figcaption>
-        </figure>
-      </header>
+      {home && (
+        <header>
+          <figure className={styles["header-container"]}>
+            <Image
+              priority
+              src="/images/profile.jpg"
+              height={144}
+              width={144}
+              alt={name}
+            />
+            <figcaption>
+              <h1>{name}</h1>
+              <p>I love Front-End so much ... ✨</p>
+            </figcaption>
+          </figure>
+        </header>
+      )}
 
       <main>{children}</main>
 
       {!home && (
-        <div className={styles.backToHome}>
+        <div className={styles["backToHome"]}>
           <Link href="/">← Back to home</Link>
         </div>
       )}
+
+      <footer className={styles["footer"]}>
+        Copyright © 2023 SIYEON PARK. All Rights Reserved.
+      </footer>
     </div>
   );
 };
