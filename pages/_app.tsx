@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
-import "../styles/common-properties.scss";
 import "../styles/global.scss";
+import "../styles/common-properties.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />;

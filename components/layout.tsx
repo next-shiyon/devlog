@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.scss";
 import Link from "next/link";
+import styles from "./layout.module.scss";
 
 const name = "SIYEON PARK";
 export const siteTitle = "SIYEON's blog";
@@ -13,7 +13,7 @@ type Props = {
 
 const Layout = ({ children, home }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={styles["container"]}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -30,36 +30,19 @@ const Layout = ({ children, home }: Props) => {
       </Head>
 
       <header>
-        {home ? (
-          <figure className={styles.profile}>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <figcaption>
-              <h1>{name}</h1>
-              <p>I love Front-End so much ... ✨</p>
-            </figcaption>
-          </figure>
-        ) : (
-          <Link href="/">
-            <figure>
-              <Image
-                priority
-                src="/images/profile.jpg"
-                height={108}
-                width={108}
-                alt={name}
-              />
-              <figcaption>
-                <h2>{name}</h2>
-              </figcaption>
-            </figure>
-          </Link>
-        )}
+        <figure className={styles["header-container"]}>
+          <Image
+            priority
+            src="/images/profile.jpg"
+            height={144}
+            width={144}
+            alt={name}
+          />
+          <figcaption>
+            <h1>{name}</h1>
+            <p>I love Front-End so much ... ✨</p>
+          </figcaption>
+        </figure>
       </header>
 
       <main>{children}</main>
