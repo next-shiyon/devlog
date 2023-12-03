@@ -34,19 +34,19 @@ const Home = ({ allPostsData }: Props) => {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <h2>Blog</h2>
+        <h2 className={styles["category"]}>blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title, category, tags }) => (
-            <li key={id}>
+            <li className={styles["postList-container"]} key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small>
                 <Date dateString={date} />
               </small>
               <br />
-              <div>
+              <div className={styles["postInfo-container"]}>
                 <small>{category}</small>
-                <div>
+                <div className={styles["tagList"]}>
                   {tags.map((tag, index) => (
                     <small key={index}>{tag}</small>
                   ))}

@@ -59,8 +59,20 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
 /*
-  8. Create a root stacking context
+  8. list style reset
+*/
+ol,
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+  9. Create a root stacking context
 */
 #root,
 #__next {
