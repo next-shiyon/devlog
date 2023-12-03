@@ -1,0 +1,91 @@
+.post-container {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: medium;
+    margin-top: 1.75em;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: medium;
+    margin-top: 1.5em;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  span {
+    font-size: 0;
+  }
+
+  code {
+    font-size: 0.9 rem;
+    letter-spacing: -0.5px;
+    padding: 3px 6px;
+    margin: 1px -1px;
+    border-radius: 3px;
+  }
+
+  pre {
+    margin-top: 8px;
+    margin-bottom: 40px;
+  }
+
+  aside {
+    margin-top: 16px;
+    margin-bottom: 64px;
+    border-left: 3px solid var(--color-info);
+    padding-left: calc(29px);
+  }
+
+  strong {
+    font-size: 1.125rem;
+    margin-bottom: 1em;
+  }
+
+  a {
+    position: relative;
+    font-weight: bold;
+    color: var(--color-gray-1000);
+    text-decoration: none;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-gray-1000);
+    transition: all 0.15s ease-in-out;
+    opacity: 1;
+  }
+
+  a:hover::after {
+    opacity: 0;
+  }
+
+  > .postTitle {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  > .postInfo {
+    padding-left: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: var(--page-border);
+    margin-bottom: var(--spacing-md);
+  }
+}

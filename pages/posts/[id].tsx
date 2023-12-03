@@ -5,6 +5,7 @@ import Date from "../../components/date";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { PostType } from "..";
+import styles from "./index.module.scss";
 
 type ParamType = {
   params: Pick<PostType, "id">;
@@ -36,12 +37,11 @@ const Post = ({ postData }: Props) => {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
+      <article className={styles["post-container"]}>
+        <h1 className={styles["postTitle"]}>{postData.title}</h1>
+        <div className={styles["postInfo"]}>
           <Date dateString={postData.date} />
         </div>
-        <hr />
         <Markdown remarkPlugins={[remarkGfm]}>{postData.content}</Markdown>
       </article>
     </Layout>
