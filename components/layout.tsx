@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.scss";
-import utilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
+import styles from "./layout.module.scss";
 
 const name = "SIYEON PARK";
 export const siteTitle = "SIYEON's blog";
@@ -14,7 +13,7 @@ type Props = {
 
 const Layout = ({ children, home }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={styles["container"]}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -30,48 +29,35 @@ const Layout = ({ children, home }: Props) => {
         />
       </Head>
 
-      <header>
-        {home ? (
-          <figure className={styles.profile}>
+      {home && (
+        <header>
+          <figure className={styles["header-container"]}>
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
             />
             <figcaption>
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <h1>{name}</h1>
               <p>I love Front-End so much ... ✨</p>
             </figcaption>
           </figure>
-        ) : (
-          <Link href="/" className={utilStyles.colorInherit}>
-            <figure className={styles.profile}>
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-              <figcaption>
-                <h2 className={utilStyles.headingLg}>{name}</h2>
-              </figcaption>
-            </figure>
-          </Link>
-        )}
-      </header>
+        </header>
+      )}
 
       <main>{children}</main>
 
       {!home && (
-        <div className={styles.backToHome}>
+        <div className={styles["backToHome"]}>
           <Link href="/">← Back to home</Link>
         </div>
       )}
+
+      <footer className={styles["footer"]}>
+        Copyright 2023. SIYEON PARK All Rights Reserved.
+      </footer>
     </div>
   );
 };

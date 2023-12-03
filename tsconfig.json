@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,5 +24,7 @@
     "components/*.ts",
     "components/*.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

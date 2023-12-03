@@ -2,10 +2,10 @@ import Head from "next/head";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.scss";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { PostType } from "..";
+import styles from "./index.module.scss";
 
 type ParamType = {
   params: Pick<PostType, "id">;
@@ -37,9 +37,9 @@ const Post = ({ postData }: Props) => {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+      <article className={styles["post-container"]}>
+        <h1 className={styles["postTitle"]}>{postData.title}</h1>
+        <div className={styles["postInfo"]}>
           <Date dateString={postData.date} />
         </div>
         <Markdown remarkPlugins={[remarkGfm]}>{postData.content}</Markdown>

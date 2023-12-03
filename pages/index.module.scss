@@ -1,21 +1,40 @@
-.postInfoContainer {
-  display: flex;
-  align-items: center;
+.category {
+  color: var(--color-gray-900);
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: var(--spacing-md);
 }
 
-.tagsContainer {
-  display: flex;
-  gap: 6px;
-  padding: 0px 8px;
+.postList-container {
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  border-bottom: var(--page-border);
 
-  .tag {
-    color: #4482ff;
-    padding: 2px 12px;
-    background-color: #eaf1fa;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
+  > a {
+    color: var(--color-gray-900);
+    font-size: 1.35rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.postInfo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-gray-700);
+
+  & .tagList {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-primary-light);
+
+    > small {
+      background-color: var(--color-gray-100);
+      padding: var(--spacing-xxs) var(--spacing-xs);
+      border-radius: 50px;
+    }
   }
 }
