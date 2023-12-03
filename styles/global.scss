@@ -1,86 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600;700;900&display=swap");
 
-html,
-body {
-  padding: 0;
-  margin: 0;
+html {
   font-family: "Noto Sans JP", sans-serif;
-  line-height: 1.5;
-  font-size: 18px;
 }
 
-h1 {
-  margin-bottom: 2.5rem;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 1.75rem;
-  font-weight: medium;
-  margin-top: 1.75rem;
-  margin-bottom: 24px;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-weight: medium;
-  margin-top: 1.25rem;
-  margin-bottom: 12px;
-}
-
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1.125rem;
-}
-
-code {
-  font-size: 0.9rem;
-  letter-spacing: -0.5px;
-  padding: 3px 6px;
-  margin: 1px -1px;
-  border-radius: 3px;
-}
-
-pre {
-  margin-top: 8px;
-  margin-bottom: 40px;
-
-  > div {
-    padding: 16px;
-    border-radius: 0px;
-  }
-}
-
-blockquote {
-  padding: 16px;
-  padding-left: 29px;
-
-  margin-bottom: 64px;
-  border-left: 3px solid;
-  padding-left: calc(29px);
-}
-
-strong {
-  font-size: 1.125rem;
-  margin-bottom: 1em;
-}
-
-* {
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
-a {
-  color: var(--link-color-main);
-  text-decoration: none;
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
 }
-
-a:hover {
-  text-decoration: underline;
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-img {
-  max-width: 100%;
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
-  border: 1px black solid;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
