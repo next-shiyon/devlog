@@ -4,18 +4,65 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: 18px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1 {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: medium;
+  margin-top: 1.75rem;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: medium;
+  margin-top: 1.25rem;
+  margin-bottom: 12px;
+}
+
 p {
-  margin: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+code {
+  font-size: 0.9rem;
+  letter-spacing: -0.5px;
+  padding: 3px 6px;
+  margin: 1px -1px;
+  border-radius: 3px;
+}
+
+pre {
+  margin-top: 8px;
+  margin-bottom: 40px;
+
+  > div {
+    padding: 16px;
+    border-radius: 0px;
+  }
+}
+
+blockquote {
+  padding: 16px;
+  padding-left: 29px;
+
+  margin-bottom: 64px;
+  border-left: 3px solid;
+  padding-left: calc(29px);
+}
+
+strong {
+  font-size: 1.125rem;
+  margin-bottom: 1em;
 }
 
 * {
@@ -34,4 +81,5 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+  border: 1px black solid;
 }

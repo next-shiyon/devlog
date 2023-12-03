@@ -42,6 +42,7 @@ const Post = ({ postData }: Props) => {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
+        <hr />
         <Markdown remarkPlugins={[remarkGfm]}>{postData.content}</Markdown>
       </article>
     </Layout>
