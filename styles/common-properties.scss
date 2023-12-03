@@ -1,3 +1,4 @@
+// Color
 $--color-text: hsl(210deg 10% 90% / 1);
 $--color-background: hsl(210deg 15% 6% / 1);
 $--color-blurred-background: hsl(210deg 15% 6% / 0.75);
@@ -45,3 +46,10 @@ $--kbd-background-color: var($--color-gray-300);
 $--kbd-border-color: var($--color-gray-200);
 $--selection-text-color: white;
 $--selection-background-color: hsl(260deg 100% 40% / 0.85);
+
+// Spacing
+$--spacing-xxs: 4px;
+$--spacing-xs: 8px;
+$--spacing-sm: 16px;
+$--spacing-md: 32px;
+$--spacing-lg: 64px;
