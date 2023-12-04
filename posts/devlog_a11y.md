@@ -19,7 +19,7 @@ tags: ["a11y", "light-houst"]
 
 ## html に lang 属性を追加
 
-[ next.js custom document ](https://nextjs.org/docs/pages/building-your-application/routing/custom-document)を参考したら良い。layout みたいに、ページ全体を囲むページを作るイメージ。
+[next.js custom document](https://nextjs.org/docs/pages/building-your-application/routing/custom-document)を参考したら良い。layout みたいに、ページ全体を囲むページを作るイメージ。
 
 ```ts
 import { Head, Html, Main, NextScript } from "next/document";
