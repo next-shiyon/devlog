@@ -6,6 +6,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { PostType } from "..";
 import styles from "./index.module.scss";
+import TableOfContents from "../../components/tableOfContents";
 
 type ParamType = {
   params: Pick<PostType, "id">;
@@ -42,6 +43,7 @@ const Post = ({ postData }: Props) => {
         <div className={styles["postInfo"]}>
           <Date dateString={postData.date} />
         </div>
+        <TableOfContents />
         <Markdown remarkPlugins={[remarkGfm]}>{postData.content}</Markdown>
       </article>
     </Layout>
