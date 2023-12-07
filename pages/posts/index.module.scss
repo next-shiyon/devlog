@@ -19,6 +19,22 @@
     margin-bottom: 12px;
   }
 
+  ul,
+  ol {
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    font-size: 1.125rem;
+    list-style: circle;
+    margin-left: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  ol li {
+    list-style: decimal;
+  }
+
   p {
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
@@ -29,7 +45,7 @@
   }
 
   code {
-    font-size: 0.9 rem;
+    background-color: var(--color-gray-100);
     letter-spacing: -0.5px;
     padding: 3px 6px;
     margin: 1px -1px;
