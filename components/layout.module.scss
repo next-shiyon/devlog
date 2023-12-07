@@ -1,35 +1,57 @@
 .container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  max-width: 768px;
+  display: grid;
+  grid-template-columns: 1fr 764px 1fr;
+  grid-template-areas:
+    ".  header-container ."
+    ". content-container table-of-contents"
+    ". footer .";
+  grid-template-rows: auto 1fr; /* NEW */
+  gap: var(--spacing-md);
   min-height: 100vh;
   margin: var(--spacing-lg) auto auto;
+
+  .content-container {
+    grid-area: content-container;
+  }
+
+  .header-container {
+    grid-area: header-container;
+  }
+
+  .table-of-contents {
+    grid-area: table-of-contents;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
 }
 
 .header-container {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding-bottom: var(--spacing-md);
-  border-bottom: var(--page-border);
+  > figure {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+    border-bottom: var(--page-border);
 
-  > img {
-    border: none;
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-  }
+    > img {
+      border: none;
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
+    }
 
-  > figcaption h1 {
-    font-size: 1.5rem;
-    color: var(--color-gray-1000);
-  }
+    > figcaption h1 {
+      font-size: 1.5rem;
+      color: var(--color-gray-1000);
+    }
 
-  > figcaption p {
-    color: var(--color-gray-800);
+    > figcaption p {
+      color: var(--color-gray-800);
+    }
   }
 }
 

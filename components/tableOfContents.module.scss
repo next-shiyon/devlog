@@ -1,0 +1,32 @@
+.tableOfContents {
+  width: 300px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 150px;
+  margin-left: 20px;
+  margin-top: 275px;
+  padding: var(--spacing-sm);
+  color: var(--color-primary-light);
+  background-color: var(--color-kbd-background-color);
+  border-radius: 4px;
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+
+  ul li {
+    list-style: inside;
+  }
+
+  ul li li {
+    padding-left: 0.75rem;
+    list-style-type: circle;
+  }
+
+  a {
+    color: var(--color-action);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
