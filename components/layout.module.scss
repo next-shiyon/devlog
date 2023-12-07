@@ -11,19 +11,19 @@
   min-height: 100vh;
   margin: var(--spacing-lg) auto auto;
 
-  .content-container {
+  > .content-container {
     grid-area: content-container;
   }
 
-  .header-container {
+  > .header-container {
     grid-area: header-container;
   }
 
-  .table-of-contents {
+  > .table-of-contents {
     grid-area: table-of-contents;
   }
 
-  .footer {
+  > .footer {
     grid-area: footer;
   }
 }
@@ -31,7 +31,6 @@
 .header-container {
   > figure {
     display: flex;
-    justify-content: start;
     align-items: center;
     gap: var(--spacing-sm);
     padding-bottom: var(--spacing-md);
