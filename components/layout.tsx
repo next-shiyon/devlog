@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./layout.module.scss";
+import TableOfContents from "./tableOfContents";
 
 const name = "SIYEON PARK";
 export const siteTitle = "SIYEON's blog";
@@ -29,9 +30,14 @@ const Layout = ({ children, home }: Props) => {
         />
       </Head>
 
+      {!home && (
+        <div className={styles["table-of-contents"]}>
+          <TableOfContents />
+        </div>
+      )}
       {home && (
-        <header>
-          <figure className={styles["header-container"]}>
+        <header className={styles["header-container"]}>
+          <figure>
             <Image
               priority
               src="/images/profile.jpg"
@@ -47,13 +53,14 @@ const Layout = ({ children, home }: Props) => {
         </header>
       )}
 
-      <main>{children}</main>
-
-      {!home && (
-        <div className={styles["backToHome"]}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
+      <main className={styles["content-container"]}>
+        {children}
+        {!home && (
+          <div className={styles["backToHome"]}>
+            <Link href="/">← Back to home</Link>
+          </div>
+        )}
+      </main>
 
       <footer className={styles["footer"]}>
         Copyright 2023. SIYEON PARK All Rights Reserved.

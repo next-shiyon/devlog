@@ -33,6 +33,14 @@ export const getStaticProps = async ({ params }: ParamType) => {
 };
 
 const Post = ({ postData }: Props) => {
+  const H2 = ({ node, ...props }: any) => {
+    return <h2 id={node.position?.start.line.toString()}>{props.children}</h2>;
+  };
+
+  const H3 = ({ node, ...props }: any) => {
+    return <h3 id={node.position?.start.line.toString()}>{props.children}</h3>;
+  };
+
   return (
     <Layout>
       <Head>
@@ -43,8 +51,15 @@ const Post = ({ postData }: Props) => {
         <div className={styles["postInfo"]}>
           <Date dateString={postData.date} />
         </div>
-        <TableOfContents />
-        <Markdown remarkPlugins={[remarkGfm]}>{postData.content}</Markdown>
+        <Markdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            h2: H2,
+            h3: H3,
+          }}
+        >
+          {postData.content}
+        </Markdown>
       </article>
     </Layout>
   );

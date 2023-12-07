@@ -1,11 +1,22 @@
 .tableOfContents {
-  max-width: 300px;
+  width: 300px;
   position: sticky;
   position: -webkit-sticky;
-  top: 0px;
-  transform: translate(780px, 150px);
+  top: 150px;
+  margin-top: 275px;
   padding: var(--spacing-sm);
   color: var(--color-primary-light);
   background-color: var(--color-kbd-background-color);
   border-radius: 4px;
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+
+  a {
+    color: var(--color-action);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
