@@ -41,11 +41,11 @@ export default TableOfContents;
 
 #### position: fixed
 
-![position fixed の動作](/images/posts/toc3.png)
+![position fixed の動作](/images/posts/toc3.gif)
 
 #### position: sticky
 
-![position sticky の動作](/images/posts/toc4.png)
+![position sticky の動作](/images/posts/toc4.gif)
 
 > 個人的ではあるが・・TOC がある程度スクロールによって動くのがより自然に感じる
 
