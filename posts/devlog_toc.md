@@ -21,7 +21,7 @@ export const TableOfContents = () => {
 export default TableOfContents;
 ```
 
-> aria-label 은 스크린리더가 읽는 요소
+> aria-label はスクリーンリーダーが読み取る要素
 
 `TableOfContent` というコンポーネントを作る。TOC コンポーネントでは、ナビゲーションリンクを持っている目次を提供するので、`nav`タグを使用しよう。 [The Navigation Section element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
 
