@@ -8,8 +8,22 @@
     ". footer .";
   grid-template-rows: auto 1fr; /* NEW */
   gap: var(--spacing-md);
-  min-height: 100vh;
+  min-height: 100svh;
   margin: var(--spacing-lg) auto auto;
+
+  @media screen and (max-width: 1024px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header-container"
+      "content-container"
+      "footer";
+
+    > .table-of-contents {
+      display: none;
+    }
+  }
 
   > .content-container {
     grid-area: content-container;
@@ -69,7 +83,7 @@
 
 .footer {
   padding: var(--spacing-md);
-  position: absolute;
+  position: static;
   text-align: center;
   font-size: 0.8rem;
   color: var(--color-gray-400);
