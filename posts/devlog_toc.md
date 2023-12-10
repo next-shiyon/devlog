@@ -271,9 +271,15 @@ export default TableOfContents;
 ![描画される TOC](/images/posts/toc6.png)
 すると？このように TOC が作られる。ウェーイ〜！
 
-## 最後に
+### 勉強になったこと
 
-1. `document.querySelectorAll("h2, h3")` で画面の h2, h3 タグを拾えることがわかった。`document object` について興味深く感じた。JS は DOM の操作できるのがめっちゃメリットだと思う。
-2. データを考慮する時に、画面の UI から考えてみるのがありだよね。UI としてあるべき姿を考えてそこからデータの構造を作れるんだ。
-3. position: sticky と fixed の違いについて
-4. display: grid について
+1. `document.querySelectorAll()` で画面の HTML タグを拾えることがわかった`document object` って面白いやつだね。JS は DOM の操作ができるのがめっちゃメリットだと思う。
+2. データ構造を考慮する時に、画面の UI から考えてみるのはありだね。UI としてあるべき姿を考えてそこからデータの構造を作れるんだ。
+3. position: sticky と fixed の違いについてわかった。画面の特定の位置に要素を留めたいのであれば、`sticky`。ただ、特定の位置に要素を固定したいのであれば、`fixed`を利用する。
+4. 2D のレイアウトであれば、`display: grid` を使いましょう。
+
+### 参考
+
+1. [How to build a table of contents in React](https://www.emgoto.com/react-table-of-contents/)
+2. [react-markdown に目次をつける
+   ](https://qiita.com/toki_dev/items/af810b284fcea62d869d)
