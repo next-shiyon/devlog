@@ -32,9 +32,10 @@ export default TableOfContents;
 
 ```css
 .tableOfContents {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 150px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 150px;
+}
 ```
 
 `position: sticky`を利用して、指定した画面の位置に TOC を固定する。（`position: -webkit-sticky;`は safari 対応の目的）要素を画面の特定の位置に固定させる方法はいろんな手法があるが、わざと`sticky`を利用した理由は、画面をスクロールすると要素も一緒に画面の上部に移動するけど、一定の位置からは固定されるような実装ができるため。上記の CSS だと、`top: 150px` の位置で TOC が引っかかって固定されるという意味になる。`absolute`や`fixed`を利用すると、スクロールによってい動くなどの動作はできず、画面の指定した位置にずっと固定される。
