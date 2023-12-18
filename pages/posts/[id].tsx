@@ -2,11 +2,13 @@ import Head from "next/head";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
-import Markdown from "react-markdown";
+import Markdown, { ExtraProps } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { PostType } from "..";
 import styles from "./index.module.scss";
-import TableOfContents from "../../components/tableOfContents";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { ClassAttributes, HTMLAttributes } from "react";
+import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 type ParamType = {
   params: Pick<PostType, "id">;
@@ -30,6 +32,31 @@ export const getStaticProps = async ({ params }: ParamType) => {
   return {
     props: { postData },
   };
+};
+
+const Pre = ({
+  children,
+  ...props
+}: ClassAttributes<HTMLPreElement> &
+  HTMLAttributes<HTMLPreElement> &
+  ExtraProps) => {
+  if (!children || typeof children !== "object") {
+    return <code {...props}>{children}</code>;
+  }
+  const childType = "type" in children ? children.type : "";
+  if (childType !== "code") {
+    return <code {...props}>{children}</code>;
+  }
+
+  const childProps = "props" in children ? children.props : {};
+  const { className, children: code } = childProps;
+  const language = className?.replace("language-", "");
+
+  return (
+    <SyntaxHighlighter language={language} style={atomOneDark}>
+      {String(code).replace(/\n$/, "")}
+    </SyntaxHighlighter>
+  );
 };
 
 const Post = ({ postData }: Props) => {
@@ -56,6 +83,7 @@ const Post = ({ postData }: Props) => {
           components={{
             h2: H2,
             h3: H3,
+            pre: Pre,
           }}
         >
           {postData.content}

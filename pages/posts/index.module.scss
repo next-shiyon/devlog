@@ -1,81 +1,83 @@
 .post-container {
-  h1 {
+  > h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 2.5rem;
   }
 
-  h2 {
+  > h2 {
     font-size: 1.75rem;
     font-weight: medium;
     margin-top: 1.75em;
     margin-bottom: 24px;
   }
 
-  h3 {
+  > h3 {
     font-size: 1.5rem;
     font-weight: medium;
     margin-top: 1.5em;
     margin-bottom: 12px;
   }
 
-  h4 {
+  > h4 {
     font-size: 1.3rem;
     font-weight: medium;
     margin-top: 1.25em;
     margin-bottom: 10px;
   }
 
-  ul,
-  ol {
+  > ul,
+  > ol {
     margin-bottom: 1.5rem;
   }
 
-  li {
+  > li {
     font-size: 1.125rem;
     list-style: circle;
     margin-left: 1.5rem;
     padding-bottom: 0.5rem;
   }
 
-  ol li {
+  > ol li {
     list-style: decimal;
   }
 
-  p {
+  > p {
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
   }
 
-  span {
+  > span {
     font-size: 0;
   }
 
-  img {
+  > img {
     margin-bottom: 1.25rem;
   }
 
-  code {
+  > code {
     background-color: var(--color-gray-100);
     letter-spacing: -0.5px;
     padding: 3px 6px;
     margin: 1px -1px;
-    border-radius: 3px;
+    border-radius: var(--border-radius-sm);
   }
 
-  pre {
+  > pre {
+    padding: var(--spacing-sm) var(--spacing-sm) !important;
     margin-top: 8px;
     margin-bottom: 40px;
+    border-radius: var(--border-radius-sm);
   }
 
-  aside {
+  > aside {
     margin-top: 16px;
     margin-bottom: 64px;
     border-left: 3px solid var(--color-info);
     padding-left: calc(29px);
   }
 
-  strong {
+  > strong {
     font-size: 1.125rem;
     margin-bottom: 1em;
   }
