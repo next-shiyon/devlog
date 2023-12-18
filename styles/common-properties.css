@@ -54,6 +54,9 @@
   --page-border: 1px solid var(--page-border-color);
   background: var(--color-background);
 
+  /* Radius */
+  --border-radius-sm: 4px;
+
   /* Spacing */
   --spacing-xxs: 4px;
   --spacing-xs: 8px;
