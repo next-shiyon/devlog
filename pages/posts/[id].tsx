@@ -80,6 +80,7 @@ const Post = ({ postData }: Props) => {
         loading="lazy"
         width={0}
         height={0}
+        quality={70}
         sizes="100vw"
         style={{ width: "100%", height: "auto" }}
       />

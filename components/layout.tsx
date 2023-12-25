@@ -48,6 +48,7 @@ const Layout = ({ children, home }: Props) => {
               height={144}
               width={144}
               alt={name}
+              quality={70}
             />
             <figcaption>
               <h1>{name}</h1>
