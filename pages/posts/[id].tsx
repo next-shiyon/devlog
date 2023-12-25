@@ -9,6 +9,7 @@ import styles from "./index.module.scss";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { ClassAttributes, HTMLAttributes } from "react";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Image from "next/image";
 
 type ParamType = {
   params: Pick<PostType, "id">;
@@ -68,6 +69,23 @@ const Post = ({ postData }: Props) => {
     return <h3 id={node.position?.start.line.toString()}>{props.children}</h3>;
   };
 
+  const ImageWrapper = ({ node }: any) => {
+    const {
+      properties: { src, alt },
+    } = node;
+    return (
+      <Image
+        src={src}
+        alt={alt}
+        loading="lazy"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+      />
+    );
+  };
+
   return (
     <Layout>
       <Head>
@@ -84,6 +102,7 @@ const Post = ({ postData }: Props) => {
             h2: H2,
             h3: H3,
             pre: Pre,
+            img: ImageWrapper,
           }}
         >
           {postData.content}
