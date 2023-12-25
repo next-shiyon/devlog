@@ -21,6 +21,10 @@ const Layout = ({ children, home }: Props) => {
           name="description"
           content="韓国人フロンドエンドエンジニアのつぶやきブログ"
         />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={"https://siyeon-park.com"} />
+        <meta property="og:article:author" content="SIYEON PARK" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="robots" content="all" />
