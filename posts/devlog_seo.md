@@ -1,7 +1,7 @@
 ---
-title: "[SEO] あなたの記事は検索されていますか？"
+title: "あなたの記事は検索されていますか？[SEO対策編]"
 date: "2023-11-19"
-category: "blog"
+category: "SEO"
 tags: ["SEO", "google-search-console"]
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "[SEO] Next.js 에서 Dynamic URL의 sitemap.xml 생성하기"
+title: "Next.js 에서 Dynamic URL의 sitemap.xml 생성하기"
 date: "2023-12-27"
-category: "blog"
+category: "SEO"
 tags: ["SEO", "google-search-console", "sitemap.xml", "next.js"]
 ---
 

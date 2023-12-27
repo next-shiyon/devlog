@@ -1,5 +1,5 @@
 ---
-title: "[Blog] はじめます。ブログ開発"
+title: "はじめます。ブログ開発"
 date: "2023-11-05"
 category: "blog"
 tags: ["blog", "assey"]

@@ -1,17 +1,17 @@
 ---
-title: "[a11y] アクセしビリティを考慮しましょう"
+title: "Light house を利用して、アクセしビリティを向上しよう"
 date: "2023-11-26"
-category: "blog"
+category: "a11y"
 tags: ["a11y", "light-houst"]
 ---
 
-## Light houst を利用してみよう
+## Light house を利用してみよう
 
 ![Lighthoust の chrome extension ページ](/images/posts/a11y-5.png)
 
 自分が管理しているウェブページのアクセシビリティの点数が気になるのであれば、[Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=ja&pli=1)を利用して確認することができる。
 
-![light houst result](/images/posts/a11y-1.png)
+![light house result](/images/posts/a11y-1.png)
 
 上記の extension をダウンロードし、自分のウェブページで実行したみたら、このようにレポートが出る。（インターネットからアクセスできるようにデプロイしないとレポートは出ない）
 
