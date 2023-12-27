@@ -1,28 +1,48 @@
-.container {
+.header {
+  font-size: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-size: calc(0.825rem);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: var(--header-border);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+  @media screen and (max-width: 686px) {
+    font-size: calc(0.75rem);
+    padding: var(--spacing-sm);
+  }
+}
+
+.layout {
+  min-height: 82svh;
   position: relative;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-template-columns: 1fr 764px 1fr;
-  grid-template-areas:
-    ".  header-container ."
-    ". content-container table-of-contents"
-    ". footer .";
-  grid-template-rows: auto 1fr; /* NEW */
-  gap: var(--spacing-md);
-  min-height: 100svh;
-  margin: var(--spacing-lg) auto auto;
+  gap: var(--spacing-lg);
+  place-content: center;
+  grid-template-columns: 1fr 686px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: ". content-container table-of-contents";
 
   @media screen and (max-width: 1024px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header-container"
-      "content-container"
-      "footer";
+    grid-template-columns: 686px;
+    grid-template-areas: "content-container";
 
-    > .table-of-contents {
+    .table-of-contents {
       display: none;
     }
+  }
+
+  @media screen and (max-width: 686px) {
+    grid-template-columns: 1fr;
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
   }
 
   > .content-container {
@@ -42,30 +62,15 @@
   }
 }
 
-.header-container {
-  > figure {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding-bottom: var(--spacing-md);
-    border-bottom: var(--page-border);
-
-    > img {
-      border: none;
-      border-radius: 50%;
-      width: 6rem;
-      height: 6rem;
-    }
-
-    > figcaption h1 {
-      font-size: 1.5rem;
-      color: var(--color-gray-1000);
-    }
-
-    > figcaption p {
-      color: var(--color-gray-800);
-    }
-  }
+.footer {
+  border-top: var(--footer-border);
+  padding: var(--spacing-md);
+  position: static;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+  width: 100%;
+  bottom: 0;
 }
 
 .backToHome {
@@ -79,15 +84,4 @@
   > a:hover {
     text-decoration: underline;
   }
-}
-
-.footer {
-  padding: var(--spacing-md);
-  position: static;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--color-gray-400);
-  width: 100%;
-  bottom: 0;
-  left: 0;
 }
