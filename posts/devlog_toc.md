@@ -1,7 +1,7 @@
 ---
-title: "[TOC] ブログに TOC（Table of Contents）を追加してみよう"
+title: "ブログの記事に TOC（Table of Contents）を追加してみよう"
 date: "2023-12-09"
-category: "blog"
+category: "TOC"
 tags: ["TOC", "css", "react-markdown"]
 ---
 

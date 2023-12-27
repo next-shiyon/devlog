@@ -1,7 +1,7 @@
 ---
-title: "[Next.js] ブログっぽいものを作る上で、必要最低限 Next.js 知識"
+title: "ブログを作る上で、必要最低限の Next.js 知識"
 date: "2023-11-10"
-category: "blog"
+category: "next.js"
 tags: ["next.js"]
 ---
 
