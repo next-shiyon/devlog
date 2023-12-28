@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "./layout.module.scss";
 import TableOfContents from "./tableOfContents";
+import Image from "next/image";
 
 export const siteTitle = "FRONT INSIGHTS";
 
@@ -15,6 +16,13 @@ const Layout = ({ children, home }: Props) => {
     <>
       <header className={styles["header"]}>
         <Link href="/">
+          <Image
+            className={styles["logo"]}
+            src="/images/logo.png"
+            alt="logo"
+            width={40}
+            height={40}
+          />
           <h1>{siteTitle}</h1>
         </Link>
       </header>
