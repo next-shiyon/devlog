@@ -20,10 +20,11 @@ const Layout = ({ children, home }: Props) => {
             className={styles["logo"]}
             src="/images/logo.png"
             alt="logo"
-            width={40}
-            height={40}
+            width={140}
+            height={0}
+            sizes="100vw"
+            style={{ height: "auto" }}
           />
-          <h1>{siteTitle}</h1>
         </Link>
       </header>
       <div className={styles["layout"]}>

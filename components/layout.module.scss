@@ -12,10 +12,6 @@
   @media screen and (max-width: 686px) {
     font-size: calc(0.55rem);
     padding: var(--spacing-sm);
-
-    & .logo {
-      display: none;
-    }
   }
 
   > .logo {
