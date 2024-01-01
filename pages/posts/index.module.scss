@@ -1,3 +1,5 @@
+$absolute-value: -8px;
+
 .post-container {
   > h1 {
     font-size: 2.5rem;
@@ -36,13 +38,12 @@
 
   > ul,
   ol {
-    border-left: 2px solid var(--color-primary);
+    border-left: 3px solid var(--color-primary);
     background-color: var(--color-gray-50);
     border-radius: var(--border-radius-sm);
     padding: 0.645rem;
     padding-left: 2rem;
     font-size: calc(1.125rem);
-    margin-bottom: 1.5rem;
   }
 
   li:not(:last-of-type) {
@@ -62,19 +63,38 @@
     font-size: 0;
   }
 
-  img {
-    margin-bottom: 1.25rem;
-    border: 1px solid var(--color-gray-50);
+  > blockquote {
+    position: relative;
+    padding: var(--spacing-xs);
+    background-color: var(--color-gray-50);
     border-radius: var(--border-radius-sm);
-  }
+    font-style: italic;
 
-  code {
-    font-size: 0.9em;
-    letter-spacing: -0.5px;
-    padding: 4.5px 6px;
-    margin: 1px -1px;
-    background: rgba(115, 125, 140, 0.17);
-    border-radius: 3px;
+    > p {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+      position: relative;
+      quotes: '"' '"';
+    }
+
+    > p::before,
+    p::after {
+      font-size: 3rem;
+      position: absolute;
+      font-family: serif !important;
+    }
+
+    > p::before {
+      top: $absolute-value;
+      left: $absolute-value - 14px;
+      content: open-quote;
+    }
+
+    > p::after {
+      bottom: $absolute-value - 22px;
+      right: $absolute-value + 2px;
+      content: close-quote;
+    }
   }
 
   > pre {
@@ -104,13 +124,35 @@
   > aside {
     margin-top: 16px;
     margin-bottom: 64px;
-    border-left: 3px solid var(--color-info);
+    border-left: 3px solid var(--color-secondary);
     padding-left: calc(29px);
   }
 
   > strong {
     font-size: 1.125rem;
     margin-bottom: 1em;
+  }
+
+  img {
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0px 0px 15px -5px #777777;
+  }
+
+  img + em {
+    font-size: 0.95rem;
+    text-align: center;
+    display: block;
+    margin-top: calc(var(--spacing-xs) * -1);
+  }
+  code {
+    font-size: 0.9em;
+    letter-spacing: -0.5px;
+    padding: 4.5px 6px;
+    margin: 1px -1px;
+    background: rgba(115, 125, 140, 0.17);
+    border-radius: 3px;
   }
 
   a {
