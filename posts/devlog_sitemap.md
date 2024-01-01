@@ -39,9 +39,9 @@ Google 에서는 사이트 페이지가 제대로 링크되었다면 대개 대�
 
 구현 순서는 다음과 같습니다.
 
-> 1. `sitemap.xml.ts` 파일 생성
-> 2. `getServerSideProps` 내부에서 URL에 대한 사이트맵 구성하기
-> 3. 사이트맵을 요청받으면, 작성된 `xml 사이트맵`을 반환하기
+1. `sitemap.xml.ts` 파일 생성
+2. `getServerSideProps` 내부에서 URL에 대한 사이트맵 구성하기
+3. 사이트맵을 요청받으면, 작성된 `xml 사이트맵`을 반환하기
 
 ### `sitemap.xml.ts` 파일 생성
 

@@ -64,9 +64,10 @@ $absolute-value: -8px;
   }
 
   > blockquote {
+    margin: var(--spacing-sm);
     position: relative;
-    padding: var(--spacing-xs);
-    background-color: var(--color-gray-50);
+    padding: var(--spacing-md) var(--spacing-md);
+    background-color: var(--color-blurred-background);
     border-radius: var(--border-radius-sm);
     font-style: italic;
 
@@ -146,6 +147,7 @@ $absolute-value: -8px;
     display: block;
     margin-top: calc(var(--spacing-xs) * -1);
   }
+
   code {
     font-size: 0.9em;
     letter-spacing: -0.5px;
