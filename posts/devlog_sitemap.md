@@ -7,9 +7,9 @@ tags: ["SEO", "google-search-console", "sitemap.xml", "next.js"]
 
 본 글은 다음과 같은 전제조건이 있습니다.
 
-> 1. 사이트맵은 `XML 사이트맵`방식을 이용한다.
-> 2. Next.js 프레임워크 이용한다.
-> 3. Typescript를 이용한다.
+1. 사이트맵은 `XML 사이트맵`방식을 이용한다.
+2. Next.js 프레임워크 이용한다.
+3. Typescript를 이용한다.
 
 ## 사이트맵이란?
 
