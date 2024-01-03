@@ -1,6 +1,6 @@
 ---
 title: "Dockerfile 에서 포트포워딩을 제대로 했는데 웹앱에 접속이 안되는 문제"
-date: "2023-12-31"
+date: "2024-01-03"
 category: "wisdom"
 tags: ["wisdom", "docker", "port-forwarding"]
 ---
