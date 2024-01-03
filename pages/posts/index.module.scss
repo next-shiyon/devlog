@@ -40,7 +40,7 @@ $absolute-value: -8px;
   ol {
     border-left: 3px solid var(--color-primary);
     background-color: var(--color-gray-50);
-    border-radius: var(--border-radius-sm);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
     padding: 0.645rem;
     padding-left: 2rem;
     font-size: calc(1.125rem);
