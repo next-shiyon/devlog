@@ -21,7 +21,7 @@ export const getServerSideProps = async ({ res }: { res: ServerResponse }) => {
 
   const dynamicPaths = postIdList.map(({ params: { id } }) => {
     return `<url>
-      <loc>https://siyeon-park.com/posts/${id}</loc>
+      <loc>https://www.siyeon-park.com/posts/${id}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
     </url>`;
   });

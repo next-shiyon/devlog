@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://devlog-seven.vercel.app/sitemap.xml
+Sitemap: https://www.siyeon-park.com/sitemap.xml
