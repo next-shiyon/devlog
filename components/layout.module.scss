@@ -1,12 +1,16 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   font-style: italic;
   text-transform: uppercase;
   color: var(--color-primary);
+  background-color: var(--color-background);
   font-size: calc(0.625rem);
   padding: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
   border-bottom: var(--header-border);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
   @media screen and (max-width: 686px) {

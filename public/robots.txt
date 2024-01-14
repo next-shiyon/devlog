@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.siyeon-park.com/sitemap.xml
+Sitemap: https://siyeon-park.com/sitemap.xml
